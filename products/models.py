@@ -2,6 +2,8 @@ from django.db import models
 
 class Category(models.Model):
     """A model to create a category for the products"""
+    class Meta:
+        verbose_name_plural = 'Categories'
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
