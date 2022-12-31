@@ -40,6 +40,12 @@ body {
     color: #000000;
 }
 
+.btn-outline-white {
+    background: transparent;
+    color: rgb(255, 255, 255) !important;
+    border: 1px solid rgb(255, 255, 255);
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
