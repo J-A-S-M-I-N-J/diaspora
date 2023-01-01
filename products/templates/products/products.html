@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-5">
-                <h2 class="logo-font">Merch</h2>
+                <h3 class="text-uppercase">Merch</h3>
                 <hr class="w-50 mb-1">
             </div>
         </div>
@@ -22,8 +22,8 @@
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                        <div class="sort-select-wrapper border-white w-50">
-                            <select id="sort-selector" class="custom-select bg-black text-white text-uppercase custom-select-sm rounded-0 border-white border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                        <div class="sort-select-wrapper border-white-w w-45">
+                            <select id="sort-selector" class="custom-select bg-black text-white text-uppercase custom-select-sm rounded-0 border-white-w border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                 <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 order-md-first">
-                        <p class="text-purple text-uppercase mt-3 text-center text-md-left">
+                        <p class="text-white text-uppercase mt-3 text-center text-md-left">
                             {% if search_term or current_sorting != 'None_None' %}
                                 <span class="small"><a href="{% url 'products' %}"></a></span>
                             {% endif %}
@@ -47,7 +47,7 @@
                             <div class="card h-100 border-0">
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    <img class="card-img-top border-white img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'product_detail' product.id %}">
