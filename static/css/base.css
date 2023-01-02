@@ -104,6 +104,18 @@ body {
     color: rgb(101, 0, 132);
 }
 
+#bag-color-orange {
+    color: rgb(240, 72, 5);
+}
+
+.shop-bag-btn:hover,
+.shop-bag-btn:active,
+.shop-bag-btn:focus {
+    background: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+
 .btt-button {
     height: 42px;
     width: 42px;
