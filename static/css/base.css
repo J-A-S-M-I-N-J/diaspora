@@ -35,9 +35,24 @@ body {
     min-width: 260px;
 }
 
-.btn-white {
-    background: rgb(255, 255, 255);
-    color: #000000;
+.btn-black {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.btn-black-inverted {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.btn-black-inverted:hover,
+.btn-black-inverted:active,
+.btn-black-inverted:focus {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .btn-outline-white {
@@ -50,14 +65,29 @@ body {
     border: 1px solid rgb(101, 0, 132);
 }
 
+.btn-purple {
+    background: rgb(101, 0, 132);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-white:hover,
-.btn-white:active,
-.btn-white:focus {
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.btn-purple:hover,
+.btn-purple:active,
+.btn-purple:focus {
+    background: rgb(0, 0, 0);
+    color: rgb(101, 0, 132);
+    border-color: rgba(0, 0, 0, 0);
 }
 
 .text-white {
@@ -98,8 +128,16 @@ body {
     background-color: rgb(101, 0, 132);
 }
 
+.bg-orange {
+    background-color: rgb(240, 72, 5);
+}
+
 .text-purple {
     color: rgb(101, 0, 132);
+}
+
+.text-orange {
+    color: rgb(240, 72, 5);
 }
 
 #bag-color-orange {
