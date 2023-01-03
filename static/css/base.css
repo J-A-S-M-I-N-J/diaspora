@@ -167,6 +167,10 @@ body {
     cursor: pointer;
 }
 
+input[name='q']::placeholder {
+    color: rgb(0, 0, 0);
+}
+
 /* -------------------------------- Toasts */
 
 .message-container {
