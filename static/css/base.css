@@ -42,13 +42,11 @@ body {
 
 .btn-outline-white {
     background: transparent;
-    color: rgb(255, 255, 255) !important;
     border: 1px solid rgb(255, 255, 255);
 }
 
 .btn-outline-purple {
     background: transparent;
-    color: rgb(101, 0, 132) !important;
     border: 1px solid rgb(101, 0, 132);
 }
 
@@ -107,6 +105,7 @@ body {
 #bag-color-orange {
     color: rgb(240, 72, 5);
 }
+
 
 .shop-bag-btn:hover,
 .shop-bag-btn:active,
@@ -197,6 +196,66 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #ffffff; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: rgb(245, 245, 245);
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgb(101, 0, 132);
+    border: 1px solid rgb(255, 255, 255);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: rgb(0, 0, 0);
+    background-color: rgb(101, 0, 132);
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+	color: rgb(255, 255, 255); /* text-info */
+}
+
+.underline_link {    
+    text-decoration-line: underline;
+}
+
 
 /* -------------------------------- Media Queries */
 
