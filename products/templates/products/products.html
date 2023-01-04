@@ -60,10 +60,22 @@
                                 <div class="card-footer bg-black pt-0 border-0 text-center">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-center text-white">${{ product.price }}</p>
+                                            <p class="lead mb-0 text-center text-white">$ {{ product.price }}</p>
                                         </div>
                                     </div>
                                 </div>
+                                {% if request.user.is_superuser %}
+                                    <div class="card-footer bg-black pt-0 border-0 text-center">
+                                        <div class="row">
+                                            <div class="col">
+                                                <small class="edit-delete-text">
+                                                    <a class="text-white" href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                    <a class="text-white" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
