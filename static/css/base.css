@@ -326,6 +326,9 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.card-body {
+    padding:5px;
+}
 
 /* -------------------------------- Media Queries */
 
@@ -335,6 +338,29 @@ input[name='q']::placeholder {
     max-width: 80%;
   }
 }
+
+/* 
+@media (min-width: 992px and max-width: 1199px) {
+    .container-front-page {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 768px and max-width: 991px) {
+    .container-front-page {
+        max-width: 90%;
+    }
+}
+
+*/
+
+@media (min-width: 280px and max-width: 575px) {
+    .card-body {
+        margin:20px;
+    }
+}
+
+
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {

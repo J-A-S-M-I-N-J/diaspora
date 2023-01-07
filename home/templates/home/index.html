@@ -9,23 +9,51 @@
     </div>
 {% endblock %}
 
+<div class="container">
+    <div class="row">
+        <div class="col 10">
+            <p class="display-10 logo-font text-white">
+                A diaspora (/daɪˈæspərə/ dye-AS-pər-ə) is a population that is scattered across 
+                regions which are separate from its geographic place of origin.
+            </p>
+        </div>
+    </div>
+</div>
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-12 col-lg-12 col-md-10 col-sm-8 my-auto">
-                <p class="display-10 logo-font text-black">
-                    A diaspora (/daɪˈæspərə/ dye-AS-pər-ə) is a population that is scattered across regions which are separate from its geographic place of origin.
-                </p>
-                <div class="my-6">
-                    
-                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">About</a>
-                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Music</a>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Merch</a>
-                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Blog</a>
-                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Booking</a>
-                    
+    <div class="overlay"></div>
+        <div class="container container-front-page my-auto col-xs-12 col-sm-12 col-md-10 col-lg-12 col-xl-2 d-flex flex-row justify-content-center">
+                <div class="card-group front-page-images border-0 padding-2">
+                    <div class="card-body width- bg-black">
+                        <a href="default.asp">
+                            <img class="card-img-top border-white img-fluid" src="/media/About.png" alt="HTML tutorial" style="width:265px;height:331px;">
+                        </a>
+                    </div>
+                    <div class="card-body bg-black">
+                        <a href="default.asp">
+                            <img class="card-img-top border-white img-fluid" src="/media/Music.png" alt="HTML tutorial" style="width:265px;height:331px;">
+                        </a>
+                    </div>
+                    <div class="card-body bg-black">
+                        <a href="{% url 'products' %}">
+                            <img class="card-img-top border-white img-fluid" src="/media/Merch.png" alt="HTML tutorial" style="width:265px;height:331px;">
+                        </a>   
+                    </div>
+                    <div class="card-body bg-black">
+                        <a href="default.asp">
+                            <img class="card-img-top border-white img-fluid" src="/media/Blog.png" alt="HTML tutorial" style="width:265px;height:331px;">
+                        </a>
+                    </div> 
+                    <div class="card-body bg-black">
+                        <a href="default.asp">
+                            <img class="card-img-top border-white img-fluid" src="/media/Booking.png" alt="HTML tutorial" style="width:265px;height:331px;">
+                        </a>
+                    </div> 
+                    <div class="card-body bg-black">
+                        <a href="default.asp">
+                            <img class="card-img-top border-white img-fluid" src="/media/Booking.png" alt="HTML tutorial" style="width:265px;height:331px;">
+                        </a>
+                    </div> 
                 </div>
             </div>
         </div>
-    </div>
 {% endblock %}
