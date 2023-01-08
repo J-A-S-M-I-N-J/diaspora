@@ -41,8 +41,8 @@
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row background-color-black pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-white my-0"><strong>Diaspora</strong></h2>
+                <a href="{% url 'home' %}" class="nav-link main-logo-link py-0">
+                    <img class="img-fluid img-responsive w-75" src="/media/diaspora_logo_cropped.png" alt="HTML tutorial" style="">
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -65,7 +65,7 @@
                         <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                                <p class="my-0 px-3">My Account</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -82,10 +82,10 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a id="bag-color-orange" class="{% if grand_total %} font-weight-bold {% else %} shop-bag-btn {% endif %} nav-link" href="{% url 'view_bag' %}">
+                        <a id="text-white" class="{% if grand_total %} font-weight-bold {% else %} shop-bag-btn {% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
+                                <div><i class="fas fa-shopping-bag fa-lg mr-xl-3 mr-l-3 mr-md-3"></i></div>
+                                <p class="my-0 mr-xl-3 mr-l-3 mr-md-3">
                                     {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
                                     {% else %}
@@ -100,7 +100,7 @@
         </div>
         <div class="row bg-black">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler bg-black border-white border" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler bg-white text-black" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}

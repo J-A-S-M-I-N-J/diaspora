@@ -326,8 +326,21 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-.card-body {
+.card-body-fp {
     padding:5px;
+   
+}
+
+.margin-fp-links {
+    margin-top: 50px;
+}
+
+.fp-text-margin {
+    margin-top: 100px;
+}
+
+.nav-link { 
+    padding:0px;
 }
 
 /* -------------------------------- Media Queries */
@@ -340,11 +353,12 @@ input[name='q']::placeholder {
 }
 
 /* 
-@media (min-width: 992px and max-width: 1199px) {
+@media (min-width: 992px and max-width: 1024px) {
     .container-front-page {
-        max-width: 80%;
+        max-width: 60%;
     }
 }
+
 
 @media (min-width: 768px and max-width: 991px) {
     .container-front-page {
@@ -352,15 +366,11 @@ input[name='q']::placeholder {
     }
 }
 
-*/
+
 
 @media (min-width: 280px and max-width: 575px) {
-    .card-body {
-        margin:20px;
-    }
-}
-
-
+  
+    */
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
