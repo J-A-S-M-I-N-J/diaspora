@@ -352,25 +352,45 @@ input[name='q']::placeholder {
   }
 }
 
-/* 
+
 @media (min-width: 992px and max-width: 1024px) {
-    .container-front-page {
-        max-width: 60%;
+    .overlay {
+        height: 90%;
+        width: 90%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background: rgb(0, 0, 0);
+        z-index: -1;
     }
 }
 
 
 @media (min-width: 768px and max-width: 991px) {
-    .container-front-page {
-        max-width: 90%;
+    .overlay {
+        height: 80%;
+        width: 80%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background: rgb(0, 0, 0);
+        z-index: -1;
     }
 }
 
 
 
-@media (min-width: 280px and max-width: 575px) {
-  
-    */
+@media (min-width: 576px and max-width: 767px) {
+    .overlay {
+        height: 70%;
+        width: 70%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background: rgb(0, 0, 0);
+        z-index: -1;
+    }
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
