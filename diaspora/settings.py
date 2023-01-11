@@ -1,4 +1,10 @@
 import os
+
+
+if os.path.exists("env.py"):
+    import env
+
+
 import dj_database_url
 
 """
@@ -23,16 +29,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*c#&5usrckk!xrjo%j*)zxnk9+o8j3j4)wcw&myob9#le_myk@'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['*']
 
 EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = 'bcd44f4c79aa0f'
-EMAIL_HOST_PASSWORD = 'ea89ee1cb44690'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = '2525'
 
 # Application definition
@@ -112,7 +118,7 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'"
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -136,9 +142,8 @@ DATABASES = {
 }
 
 # DATABASES = {
-   #  'default': dj_database_url.parse('postgres://jzbatzmg:TLwBzJdlxoPdFR2gpMbUtqbc4jQRHXi0@hattie.db.elephantsql.com/jzbatzmg')
+   #  'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
  # }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
