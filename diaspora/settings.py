@@ -30,6 +30,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'bcd44f4c79aa0f'
+EMAIL_HOST_PASSWORD = 'ea89ee1cb44690'
+EMAIL_PORT = '2525'
 
 # Application definition
 
@@ -50,6 +54,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'about',
+    'booking',
     
     # other
     'crispy_forms',
