@@ -342,6 +342,11 @@ input[name='q']::placeholder {
 .nav-link { 
     padding:0px;
 }
+.contact-page-list {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
 
 /* -------------------------------- Media Queries */
 
