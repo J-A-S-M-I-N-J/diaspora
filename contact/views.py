@@ -4,9 +4,16 @@ from django.http import HttpResponseRedirect
 
 # Create your views here.
 
-class about(View):
+class contact(View):
     def get(self, request, *args, **kwargs):
         return render(
             request,
             'contact.html',
+        )
+
+class terms(View):
+    def get(self, request, *args, **kwargs):
+        return render(
+            request,
+            'terms.html',
         )

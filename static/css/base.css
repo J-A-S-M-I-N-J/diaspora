@@ -348,6 +348,28 @@ input[name='q']::placeholder {
     margin:0;
 }
 
+.text-purple-light {
+    color: #bc33fb;
+}
+
+footer {
+    height: 100px;
+}
+
+.social-networks {
+    
+}
+
+.social-networks > li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: #bc33fb;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
