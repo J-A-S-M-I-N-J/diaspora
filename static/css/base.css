@@ -171,6 +171,12 @@ input[name='q']::placeholder {
     color: rgb(0, 0, 0);
 }
 
+.footer-link-pseudo:hover,
+.footer-link-pseudo:active,
+.footer-link-pseudo:focus {
+    color: rgb(0, 0, 0);
+}
+
 /* -------------------------------- Toasts */
 
 .message-container {
@@ -353,11 +359,11 @@ input[name='q']::placeholder {
 }
 
 footer {
-    height: 100px;
+    height: 80px;
 }
 
 .social-networks {
-    
+    text-align:center;
 }
 
 .social-networks > li {
@@ -366,8 +372,6 @@ footer {
 
 .social-networks i {
     font-size: 160%;
-    margin: 1%;
-    padding: 5%;
     color: #bc33fb;
 }
 /* -------------------------------- Media Queries */
