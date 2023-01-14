@@ -374,6 +374,10 @@ footer {
     font-size: 160%;
     color: #bc33fb;
 }
+
+.social-networks i:hover {
+    color: #0e0b0f;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

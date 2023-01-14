@@ -1,7 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="container">
+    <div class="row mt-5 pt-5">
+        <div class="col-12">
+            <p class="text-center text-white"></p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row mt-3 pt-5">
+        <div class="col-12">
+            <p class="text-center text-white"></p>
+        </div>
+    </div>
+</div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-3 left">
@@ -18,15 +31,15 @@
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    <p class="author text-black text-uppercase">Author: {{ post.author }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'blog_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
+                                <h2 class="card-title text-black text-uppercase">{{ post.title }}</h2>
+                                <p class="card-text text-black text-uppercase">{{ post.excerpt }}</p>
                             </a>
                             <hr />
-                            <p class="card-text h6">{{ post.created_on }} <i class="far fa-heart"></i>
+                            <p class="card-text h6 text-black text-uppercase">{{ post.created_on }} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>
                         </div>
                     </div>
