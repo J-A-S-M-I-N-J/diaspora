@@ -20,5 +20,19 @@ class artist(models.Model):
     def __str__(self):
         return self.artist_name
 
+class latestMusic(models.Model):
+    artist_name = models.CharField(max_length=254)
+    track_image = models.ImageField(null=True, blank=True)
+    track_bio = models.TextField()
+    track_link_bandcamp = models.URLField(max_length=1024, null=True, blank=True)
+    track_link_spotify = models.URLField(max_length=1024, null=True, blank=True)
+    track_link_soundcloud = models.URLField(max_length=1024, null=True, blank=True)
+
+    track_bandcamp_counter = models.IntegerField(default=0)
+    track_spotify_counter = models.IntegerField(default=0)
+    track_soundcloud_counter = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.artist_name
 
 

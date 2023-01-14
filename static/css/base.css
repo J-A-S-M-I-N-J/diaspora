@@ -378,6 +378,12 @@ footer {
 .social-networks i:hover {
     color: #0e0b0f;
 }
+
+.border-bottom {
+    border-bottom: 1px solid #bc33fb;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

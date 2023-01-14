@@ -12,5 +12,17 @@ class artistAdmin(admin.ModelAdmin):
         'artist_link_soundcloud',
     )
 
+class latestMusicAdmin(admin.ModelAdmin):
+    list_display = (
+        'artist_name',
+        'track_image',
+        'track_bio',
+        'track_link_bandcamp',
+        'track_link_spotify',
+        'track_link_soundcloud',
+    )
+
+
 
 admin.site.register(models.artist, artistAdmin)
+admin.site.register(models.latestMusic, latestMusicAdmin)
