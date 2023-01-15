@@ -19,7 +19,7 @@
             </div>
             <div class="col-6">
                 <div class="float-right">
-                    <a class="btn btn-black text-uppercase" href="{% url 'latestMusic' %}">Check Out Latest Music
+                    <a class="btn btn-black text-uppercase" href="{% url 'latestmusic' %}">Check Out Latest Music
                         <i class="fas fa-chevron-right"></i>
                     </a>
                 </div>
@@ -41,7 +41,7 @@
                     </a>
                 </div>
                 <div class="col-10 col-m-8 col-lg-6 mx-auto mt-5 mb-3">
-                    <p class="text-center text-white">{{ artist.artist_bio }}</p>
+                    <p class="text-center text-white">{{ artist.artist_bio | safe }}</p>
                 </div>
                 <div class="col-4 col-m-3 col-lg-2 pt-5">
                     <div class="row justify-content-center mb-5">
