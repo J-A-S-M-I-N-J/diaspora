@@ -1,8 +1,9 @@
-import os
-if os.path.exists("env.py"):
-    import env
-import dj_database_url
 from pathlib import Path
+import dj_database_url
+import os
+if os.path.isfile("env.py"):
+    import env
+
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -12,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['diaspora-webpage.herokuapp.com', 'localhost']
 
