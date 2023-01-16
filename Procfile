@@ -1,1 +1,1 @@
-web: diaspora.wsgi:application
+web: diaspora-website.wsgi:application
