@@ -1,1 +1,1 @@
-web: diaspora-website.wsgi:application
+web: gunicorn diaspora-website.wsgi:application
