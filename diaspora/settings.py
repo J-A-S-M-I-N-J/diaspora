@@ -15,7 +15,7 @@ SECRET_KEY = '*' #os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['diaspora-webpage.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['diaspora-website.herokuapp.com', 'localhost']
 
 EMAIL_HOST = 'smtp.mailtrap.io'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
