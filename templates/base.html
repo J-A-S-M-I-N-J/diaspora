@@ -32,6 +32,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
+    <!-- Mailchimp Newsletter-->
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f0ed095844578ec110a414515/9accc569c203ff04ddc5617e5.js");</script>
     {% endblock %}
 
     {% block extra_js %}
@@ -139,9 +141,11 @@
         $('.toast').toast('show');
     </script>
     {% endblock %}
-
-<footer class="container-fluid fixed-bottom bg-black gx-0"> 
-                <ul class="unstyled social-networks d-inline-flex justify-content-around w-100 pr-0">
+    
+    <footer>
+        <div class="container-fluid fixed-bottom"> 
+            <div class="row">
+                <ul class="social-networks d-inline-flex justify-content-around w-100 pr-0">
                     <li class="list-inline-item pt-4 footer-link-pseudo">
                         <a href="https://www.facebook.com/diaspora.cltv" target="_blank" rel="noopener"
                             aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
@@ -151,7 +155,7 @@
                             aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li class="list-inline-item pt-4 footer-link-pseudo">
-                        <a class="text-purple-light" href="#" target="_blank" rel="next"
+                        <a class="text-purple-light" href="https://chimpstatic.com/mcjs-connected/js/users/f0ed095844578ec110a414515/9accc569c203ff04ddc5617e5.js" target="_blank" rel="next"
                             aria-label="Visit our Twitter page (opens in a new tab)">Newsletter</a>
                     </li>
                     <li class="list-inline-item pt-4 footer-link-pseudo">
@@ -159,7 +163,9 @@
                             aria-label="Visit our YouTube page (opens in a new tab)">Terms & Conditions</a>
                     </li>
                 </ul> 
-</footer>
-    
+            </div>
+        </div>
+    </footer>
+
   </body>
 </html>

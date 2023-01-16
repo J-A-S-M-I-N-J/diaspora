@@ -1,0 +1,1 @@
+web: diaspora.wsgi:application
