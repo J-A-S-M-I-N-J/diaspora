@@ -31,14 +31,15 @@
                                 <img class="card-img-top" src=" {{ post.blog_image.url }}" alt="blog image about music and culture related topics">
                                 {% endif %}
                             </div>
-                            <a href="{% url 'blog_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title text-white text-uppercase">{{ post.title }}</h2>
-                                <p class="card-text text-white text-uppercase text-decoration-none">{{ post.excerpt }}</p>
+                            <a href="{% url 'blog_detail' post.slug %}">
+                                <h2 class="card-title text-white text-uppercase mt-2">{{ post.title }}</h2>
                             </a>
-                            <p class="card-text h6 text-uppercase">{{ post.created_on }} <i class="far fa-heart"></i>
+                                <p class="card-text text-white text-uppercase text-decoration-none mt-2">{{ post.excerpt }}</p>
+                            </a>
+                            <p class="card-text h6 text-uppercase mt-2">{{ post.created_on }} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>
                             <div class="image-flash">
-                                <p class="author text-uppercase">Author: {{ post.author }}</p>
+                                <p class="author text-uppercase mt-2">Author: {{ post.author }}</p>
                             </div>
                         </div>
                     </div>
