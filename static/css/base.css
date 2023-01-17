@@ -375,6 +375,72 @@ footer {
     color: #bc33fb;
 }
 
+/* -------------------------------- blog styling */
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #c1f6b8;
+}
+
+.author {
+    color: rgb(9, 1, 1);
+    margin: 4px;   
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.masthead {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.masthead-text {
+    background-color: #445261;
+    color: rgb(243, 241, 241);
+    position: relative;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.masthead-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #445261;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #000203;
+    font-size: 1rem;
+}
+
+.post-link:hover,
+.page-link {
+    color: #e3c710;
+}
+
 
 /* -------------------------------- Media Queries */
 
