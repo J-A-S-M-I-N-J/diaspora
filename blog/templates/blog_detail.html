@@ -20,11 +20,11 @@
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
-            <div class="col-md-6 masthead-text">
+            <div class="col-10 col-md-6 col-lg-6 col-xl-4 masthead-text">
                 <h1 class="post-title text-white text-uppercase">{{ post.title }}</h1>
                 <p class="post-subtitle text-white text-uppercase">{{ post.author }} | {{ post.created_on }}</p>
             </div>
-            <div class="d-sm-block d-md-block col-md-6 masthead-image">
+            <div class="col-10 col-md-6 col-lg-6 col-xl-4 d-sm-block d-md-block  masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
