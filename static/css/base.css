@@ -377,25 +377,6 @@ footer {
 
 /* -------------------------------- blog styling */
 
-.image-container {
-    position: relative;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #c1f6b8;
-}
-
-.author {
-    color: rgb(9, 1, 1);
-    margin: 4px;   
-    font-size: 14px;
-    font-weight: 500;
-}
-
 .masthead {
     margin-top: 10px;
     overflow: hidden;
@@ -406,7 +387,7 @@ footer {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #000000;
     color: rgb(243, 241, 241);
     position: relative;
 }
@@ -423,7 +404,7 @@ footer {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #000000;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -432,13 +413,13 @@ footer {
 
 .post-link {
     text-decoration: none;
-    color: #000203;
+    color: #ffffff;
     font-size: 1rem;
 }
 
 .post-link:hover,
 .page-link {
-    color: #e3c710;
+    color:  rgb(101, 0, 132);
 }
 
 
