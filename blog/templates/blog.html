@@ -58,7 +58,7 @@
         {% endif %}
         
     {% if request.user.is_superuser %}
-    <a class="text-white text-uppercase" href="/add">Add New Post</a>
+    <a class="text-white text-uppercase" href="{% url 'add' %}">Add New Post</a>
     {% endif %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
