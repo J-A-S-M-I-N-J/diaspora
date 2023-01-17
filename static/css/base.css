@@ -171,12 +171,6 @@ input[name='q']::placeholder {
     color: rgb(0, 0, 0);
 }
 
-.footer-link-pseudo:hover,
-.footer-link-pseudo:active,
-.footer-link-pseudo:focus {
-    color: rgb(0, 0, 0);
-}
-
 /* -------------------------------- Toasts */
 
 .message-container {
@@ -354,10 +348,6 @@ input[name='q']::placeholder {
     margin:0;
 }
 
-.text-purple-light {
-    color: #bc33fb;
-}
-
 footer {
     height: 80px;
 }
@@ -372,7 +362,7 @@ footer {
 
 .social-networks i {
     font-size: 160%;
-    color: #bc33fb;
+    color: #ffffff;
 }
 
 /* -------------------------------- blog styling */
