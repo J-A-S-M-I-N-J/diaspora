@@ -1,33 +1,39 @@
 <div class="collapse navbar-collapse mr-4 border-top border-bottom" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2" href="#" id="specials-link"  aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2" 
+            href="{% url 'about' %}" id="specials-link"  aria-haspopup="true" aria-expanded="false">
                 About
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2" href="#" id="specials-link"  aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2" 
+            href="{% url 'music' %}" id="specials-link"  aria-haspopup="true" aria-expanded="false">
                 Music
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a href="{% url 'products' %}" target="_blank" class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2"  
+            <a href="{% url 'products' %}" target="_blank" 
+            class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2"  
             id="specials-link" aria-haspopup="true" aria-expanded="false">
                 Merch
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2" href="{% url 'products' %}" id="specials-link" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2" 
+            href="{% url 'blog' %}" id="specials-link" aria-haspopup="true" aria-expanded="false">
                 Blog
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2" href="#" id="specials-link" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2" 
+            href="{% url 'booking' %}" id="specials-link" aria-haspopup="true" aria-expanded="false">
                 Booking
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2" href="#" id="specials-link" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2" 
+            href="{% url 'contact' %}" id="specials-link" aria-haspopup="true" aria-expanded="false">
                 Contact
             </a>
         </li>

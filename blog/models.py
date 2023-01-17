@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-from cloudinary.models import CloudinaryField
 from django.template.defaultfilters import slugify
+from .widgets import CustomClearableFileInput
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -11,7 +11,8 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
-    featured_image = CloudinaryField('image', default='placeholder')
+    blog_image = models.ImageField(null=True, blank=True)
+    blog_image_url = models.URLField(max_length=1024, null=True, blank=True)
     excerpt = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)

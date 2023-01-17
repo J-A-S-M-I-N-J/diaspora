@@ -24,11 +24,11 @@
                     <div class="card mb-4">
                         <div class="card-body bg-black text-white">
                             <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
+                                {% if "placeholder" in post.blog_image.url %}
                                 <img class="card-img-top"
                                     src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="placeholder image for posts, a blogger">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="blog image about music and culture related topics">
+                                <img class="card-img-top" src=" {{ post.blog_image.url }}" alt="blog image about music and culture related topics">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author text-uppercase">Author: {{ post.author }}</p>

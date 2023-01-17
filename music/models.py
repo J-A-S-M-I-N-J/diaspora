@@ -1,4 +1,5 @@
 from django.db import models
+from .widgets import CustomClearableFileInput
 
 # A model to track amount of links clicked on each link button
 
@@ -8,6 +9,7 @@ from django.db import models
 class artist(models.Model):
     artist_name = models.CharField(max_length=254)
     artist_image = models.ImageField(null=True, blank=True)
+    artist_image_url = models.URLField(max_length=1024, null=True, blank=True)
     artist_bio = models.TextField()
     artist_link_bandcamp = models.URLField(max_length=1024, null=True, blank=True)
     artist_link_spotify = models.URLField(max_length=1024, null=True, blank=True)
@@ -23,6 +25,7 @@ class artist(models.Model):
 class latestMusic(models.Model):
     artist_name = models.CharField(max_length=254)
     track_image = models.ImageField(null=True, blank=True)
+    track_image_url = models.URLField(max_length=1024, null=True, blank=True)
     track_bio = models.TextField()
     track_link_bandcamp = models.URLField(max_length=1024, null=True, blank=True)
     track_link_spotify = models.URLField(max_length=1024, null=True, blank=True)

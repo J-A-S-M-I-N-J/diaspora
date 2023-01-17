@@ -46,8 +46,6 @@ INSTALLED_APPS = [
     'blog',
     'music',
     'django_summernote',
-    'cloudinary_storage',
-    'cloudinary',
 
     
     # other
