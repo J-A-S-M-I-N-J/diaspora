@@ -40,14 +40,16 @@
                         <img class="card-img-top img-fluid border border-white"  src="{{ latestMusic.track_image.url }}" alt="{{ product.artist_name }}">
                     </a>
                 </div>
-                <div class="col-10 col-m-8 col-lg-6 mx-auto mt-5 mb-3">
+                <div class="col-10 col-m-8 col-lg-6 mx-auto mb-3">
                     <p class="text-center text-white">{{ latestMusic.track_bio | safe }}</p>
                 </div>
-                <div class="col-6 justify-content-center">
-                    <div class="row col-3 mb-5">
-                        <a class="btn btn-sm btn-purple justify-content-center mt-3" 
-                        href="{{ artist.track_link }}">Listen Now
-                        </a>
+                <div class="col-6">
+                    <div class="row mt-3 mb-3">
+                        <div class="col-3 justify-content-center">
+                            <a class="btn btn-purple text-uppercase" 
+                            href="{{ artist.track_link }}">Listen Now
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
