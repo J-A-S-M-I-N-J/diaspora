@@ -1,6 +1,11 @@
 <div class="collapse navbar-collapse mr-4 border-top border-bottom" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-block-d-md-none"></li>
         <li class="nav-item dropdown">
+            <a class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
             <a class="logo-font btn btn-black-inverted border-black py-1 px-3 font-weight-bold nav-link text-white mx-2" 
             href="{% url 'about' %}" id="specials-link"  aria-haspopup="true" aria-expanded="false">
                 About

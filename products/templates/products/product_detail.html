@@ -66,7 +66,7 @@
                                             </button>
                                         </div>
                                         <input class="form-control qty_input id_qty_{{ product.id }}" type="number" 
-                                            name="quantity" value="1" min="1" max="99" 
+                                            name="quantity" value="1" min="1" max="{{ product.get_inventory }}" 
                                             data-item_id="{{ product.id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-black-inverted text-white rounded-0 
@@ -79,6 +79,16 @@
                                     </div>
                                 </div>
                             </div>
+                        
+
+
+
+
+
+
+
+
+
                             <div class="col{% if s %}-12 mt-2{% endif %}">
                                 <a href="{% url 'products' %}" class="btn btn-purple rounded-0 mt-5">
                                     <span class="icon">
