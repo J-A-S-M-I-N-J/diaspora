@@ -11,14 +11,8 @@ class artist(models.Model):
     artist_image = models.ImageField(null=True, blank=True)
     artist_image_url = models.URLField(max_length=1024, null=True, blank=True)
     artist_bio = models.TextField()
-    artist_link_bandcamp = models.URLField(max_length=1024, null=True, blank=True)
-    artist_link_spotify = models.URLField(max_length=1024, null=True, blank=True)
-    artist_link_soundcloud = models.URLField(max_length=1024, null=True, blank=True)
-
-    bandcamp_counter = models.IntegerField(default=0)
-    spotify_counter = models.IntegerField(default=0)
-    soundcloud_counter = models.IntegerField(default=0)
-
+    created_on = models.DateTimeField(auto_now_add=True)
+    
     def __str__(self):
         return self.artist_name
 
@@ -27,13 +21,8 @@ class latestMusic(models.Model):
     track_image = models.ImageField(null=True, blank=True)
     track_image_url = models.URLField(max_length=1024, null=True, blank=True)
     track_bio = models.TextField()
-    track_link_bandcamp = models.URLField(max_length=1024, null=True, blank=True)
-    track_link_spotify = models.URLField(max_length=1024, null=True, blank=True)
-    track_link_soundcloud = models.URLField(max_length=1024, null=True, blank=True)
-
-    track_bandcamp_counter = models.IntegerField(default=0)
-    track_spotify_counter = models.IntegerField(default=0)
-    track_soundcloud_counter = models.IntegerField(default=0)
+    track_link = models.URLField(max_length=1024, null=True, blank=True)
+    created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.artist_name
