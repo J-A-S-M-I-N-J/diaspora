@@ -369,6 +369,22 @@ footer {
     color: rgb(173, 15, 221);
 }
 
+.social-networks i:hover {
+    color: rgb(173, 15, 221);
+}
+
+.social-networks a:hover {
+    text-decoration: none;
+    color:rgb(173, 15, 221);
+}
+
+.social-networks i:active {
+    color: rgb(0, 0, 0);
+}
+
+.social-networks a:active {
+    color: rgb(0, 0, 0);
+}
 /* -------------------------------- blog styling */
 
 .post-link {
