@@ -15,6 +15,6 @@ class artistList(generic.ListView):
 
 class latestMusicList(generic.ListView):
     model = latestMusic
-    queryset = latestMusic.objects.order_by('-created_on')
+    queryset = latestMusic.objects.order_by('created_on')
     template_name = 'latest_music.html'
     paginate_by = 6
