@@ -66,14 +66,15 @@
                                             </button>
                                         </div>
                                         <input class="form-control qty_input id_qty_{{ product.id }}" type="number" 
-                                            name="quantity" value="1" min="1" max="99" 
+                                            name="quantity" value="1" min="1" max="{{product.get_inventory}}" 
                                             data-item_id="{{ product.id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-black-inverted text-white rounded-0 
-                                            increment-qty_{{ product.id }}" data-item_id="{{ product.id }}">
+                                            increment-qty_{{ product.id }}" data-item_id="{{ product.id }}"
+                                            data-item_max="{{ product.get_inventory }}"
+                                            >
                                                     <span class="icon">
                                                         <i class="fas fa-plus text-white"></i>
-                                                    </span>
                                             </button>
                                         </div>
                                     </div>

@@ -1,4 +1,5 @@
 from django.db import models
+from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
@@ -31,7 +32,8 @@ class Product(models.Model):
         return self.name
 
     def get_inventory(self):
-        return self.inventory.quantity
+        inventory, created = Inventory.objects.get_or_create(product=self)
+        return inventory.quantity
 
 class Inventory(models.Model):
     """A model to create a product inventory"""
