@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /admin/
+Disallow: /checkout/
+Disallow: /bag/
+Sitemap: https://diaspora-website.herokuapp.com/sitemap.xml

@@ -39,9 +39,9 @@
     <div class="row">
         <div class="col card mb-4 mt-3 bg-black border-0">
             <div class="card-body">
-                <p class="card-text text-white">
+                <article class="card-text text-white">
                     {{ post.content | safe }}
-                </p>
+                </article>
                 <div class="row pl-3 pt-5 mt-5">
                     <strong>
                         {% if user.is_authenticated %}
