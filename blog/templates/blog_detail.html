@@ -19,19 +19,18 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-10">
-            <div class="col-5">
-                <h1 class="post-title text-white text-uppercase">{{ post.title }}</h1>
-                <p class="post-subtitle text-white text-uppercase">{{ post.author }} | {{ post.created_on }}</p>
-            </div>
-            <div class="col-5">
-                {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
-                {% else %}
-                <img src="{{ post.blog_image.url }}" width="100%">
-                {% endif %}
-            </div>
+        <div class="col-10 col-m-8 col-lg-6 mx-auto mb-3">
+            <h1 class="post-title text-white text-uppercase">{{ post.title }}</h1>
+            <p class="post-subtitle text-white text-uppercase">{{ post.author }} | {{ post.created_on }}</p>
         </div>
+        <div class="col-10 col-m-8 col-lg-6 mx-auto mb-3">
+            {% if "placeholder" in post.featured_image.url %}
+            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+            {% else %}
+            <img src="{{ post.blog_image.url }}" width="100%">
+            {% endif %}
+        </div>
+    </div>
     </div>
 </div>
 
