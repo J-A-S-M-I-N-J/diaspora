@@ -1,108 +1,292 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Diaspora
+Diaspora is a webpage for and by the creative collective 'Diaspora' who are a group of artists/musicians/DJ's in Stockholm active in the nightlife scene. 
+On the site you can find our music, buy our merchandise read about events and contact us through a booking page. 
 
-Welcome USER_NAME,
+You can find the live site [here](https://diaspora-webpage.herokuapp.com/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Main site image](docs/readme-header-image.PNG)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+---
+---
+# Contents
+  + [Design](#design)
+    + [Overall Feel](#overall-feel)
+    + [Colour Scheme](#colour-scheme)
+    + [Typography](#typography)
+    + [Imagery](#imagery)
+  + [Wireframes and Initial Design](#wireframes-and-initial-design)
+    + [Wireframes](#wireframes)
+    + [Design Mock Up](#design-mock-up)
++ [Features](#features)
+  + [Current Features](#current-features)
+  + [Possible Future Features](#possible-future-features)
+  + [Defensive Design Features](#defensive-design-features)
++ [Database](#database)
++ [Technologies Used](#technologies-used)
+  + [Languages](#languages)
+  + [Frameworks and Libraries](#frameworks-and-libraries)
+  + [All Others](#all-others)
++ [Testing](#testing)
++ [Deployment](#deployment)
+  + [Heroku Deployment](#heroku-deployment)
+  + [Set up AWS](#set-up-aws)
+  + [Set up Emails](#set-up-emails)
+  + [Forking the Repository](#forking-the-repository)
+  + [Making a Local Clone](#making-a-local-clone)
++ [Credits](#credits)
+  + [Content](#content)
+  + [Media](#media)
+  + [Acknowledgements](#acknowledgements)
+---
+---
 
-## Gitpod Reminders
+## Design
+### Overall Feel & Colors
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The webpage follows our graphic profile made by one of the members of the collective. Minimalistic with black and white elements that makes it easy to read and the color purple makes appearances on some links/borders since that is our signature color for when we host events. 
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+### Typography
+I chose the [Syne](https://fonts.google.com/specimen/Syne) font for the text headers throughout the site. We usually use Druk for our content so this one was the closest I could find to it for free. 
 
-Another blue button should appear to click: _Open Browser_.
+I chose the [Alata](https://www.dafont.com/milestone-outline.font) to go with it, since they seemed to match very well with Syne. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Imagery
 
-A blue button should appear to click: _Make Public_,
+The imagery throughout the site will be primarily dictated by the products for sale. These are photos that we have shot ourselves with the different products and some of the close friends that we have. 
 
-Another blue button should appear to click: _Open Browser_.
+We have also had the opportunity to take some photos on ourselves that we use for the index page as image-links. And one of our crew-members also brought some of our merch with them to Gambia and that photo is on the about page. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Our custom logo is also seen at the top left of the page on desktop views.
 
-To log into the Heroku toolbelt CLI:
+## Wireframes and Initial Design
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+[Initial wireframes here](https://drive.google.com/file/d/1ODMEJtHFIueQqgr1Jqb_9lwYfMesSUnF/view?usp=sharing)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+All Wireframes were designed for laptop/computer, iPad/tablet and phone display:
 
-------
+As the project progressed, some element placement were tweaked and updated. However, I think that the layout changes were not so drastic that they warrented new wireframes to be designed. 
 
-## Release History
+---
+---
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# Features
+## Current Features
+### **Navigation menu and header displayed across all pages**
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+The header buttons under My Account update depending on whether a user is logged in or not, and whether that user is the admin:
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Admins/Superusers have the possibility to manage products whilst others don't. If you're logged in or not it will display Register or Login, or logout/my profile. 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The navigation menu will help the user move easily across all pages. It has all the links to the different pages. On desktop it stretches by the lenght of the page but on mobile it becomes a hamburger-menu with a drop-down function. 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### **User registration not required**
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+I think not giving people 'extra-steps' to do whilst shopping online increase the probability of a purchase, therefore even people without registration can purchase our merch. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Even if a user doesn't have an account, they are still able to purchase, input a delivery address and have a confirmation email sent to them when they have completed a purchase. 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### **User profile creation**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+A user has an option to create an account if they want to. 
+Registration process:
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
++ Username
+   + A user can choose a username as long as it hasn't already been taken
+   + The user will receive an error notification immediately if their username has already been taken
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
++ Email address
+   + A user needs to sign up using an email address
+   + The email has to be inputted twice to avoid typo issues
+   + This triggers an automatic email to be sent to the user to confirm the email address as correct and set up the account. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
++ Password
+   + The password has to be inputted twice to avoid typo issues
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+With a user profile: 
++ the user can like blog-content. 
++ order history is saved & displayed in their profile.
++ Save default delivery information to their profile from the checkout page.
++ Update default delivery information to their profile from their profile page.
 
 ---
 
-Happy coding!
+### **Products Page**
+
+All users can browse through the available products.
+Products can be sorted by:
++ Price
++ Name
+
+If a user wants to know more about a product, they can click it and open the product detail page.
+
+---
+
+### **Product Details Page**
+
+From the product detail page, the user can view:
++ Product name
++ Product price 
++ Product description 
+
+The user can can then either go back to the products page, add a single item to ther bag or adjust the quantity to add to the bag
+
+---
+
+### **Artists Page**
+
+All users can browse through the artists. Where small bio-text is provided about them the page provides a link to the 'latest music' they have dropped. 
+
+---
+
+### **Latest Music Page**
+
+From the latest music page, the user can view:
++ Track names
++ Track Lenghts
++ Other info about the song/EP.
+
+At the bottom of the artist specific songs/EPs is an external link (usually to bandcamp, soundcloud or spotify.)
+
+---
+
+### **About Page**
+
+This is a page where we explain who we are and what our purpose here is. 
+
+---
+
+### **Blog**
+
+On the blog page the user can read about events or things related to music/culture that we or some of our guest writers will be writing about. 
+This page is a landing page where you can furhter click on specific blog posts you would like to read about.
+
+---
+
+### **Blog Detail Page**
+
+This is where the user can actually read about the different topics, and if you're logged in you can like the posts. 
+Admins can delete / edit any of these and there is a possbility for future implementation to create 'writer-accounts' who would have that same functionality. 
+
+---
+
+### **Admin CRUD functionality**
+
+As well as all of the abpve features(read), the admin can add, edit and delete products, artists and classes from the site - they don't have to visit the admin panel for this. 
++ Add(*Create*): 
+From the 'My Account' dropdown, the admin can choose 'Product Management' This allows them to create the item by filling in the form.
+
++ Edit(*Update*): 
+From the item detail page, the admin has an edit button that will direct them to the edit page. All of the form fields will be populated with the item information that can then be updated and saved. 
+
++ Delete(*Delete*)
+From the item detail page, the admin has a delete button that will trigger a confirmation modal. Once the admin confirms deletion, the item will be removed from the database
+
+This functionality exists for both the blog pages and the product pages, although the blog posts can't be edited from the 'My Account' view, and is instead done on the blog and blog_detail views. 
+
+---
+
+### **Bag**
+
+A user can open the bag page at any point and see what items thay have in there. 
+
+From here a user can update product quantities, remove items from the bag or access the checkout page. 
+
+Currently there is a bug on the quantity-updating where the decrement/increment buttons don't work. 
+
+---
+
+### **Checkout**
+
+The checkout page allows the user to:
++ use their default delivery address(if they have an account, are logged in and have saved those details)
++ input new delivery information if needed or are checking out as a guest
++ update their profile with the inputted edlivery information(if they have an account and are logged in)
++ Pay via Stripe for secure payments
++ A loading screen will appear when a payment is being processed to stop the user clicking away
++ If the payment form doesn't submit properly or the user closes the browser during the wait animation, Stripe will still create the order for the user. 
++ An email wil be sent to the user with their order confirmation
+
+---
+
+### **Booking page**
+
+The user can fill out a contact form and send a message to the site admin. This will send an email directly to the admin's email rather than to the admin console. 
+
+---
+
+### **Contact page**
+
+The user can browse through the Contact page where you can find out where to reach us, sign up to the newsletter, read our Terms & Conditions and then also some external links that might be of interest. 
+
+---
+
+### **Footer **
+
+The footer has links to our facebook page and our instagram-page. It also has a link to newsletter-signup and our Terms & Conditions.
+
+---
+
+### **Terms & Conditions **
+
+This page has a accordion-drop-down-function that keeps all the different paragraphs regarding our terms & conditions to use / purchase from the site. 
+
+---
+
+### **Emails**
+
+The site will send real emails when needed:
+
++ New customer registration
++ Order confirmation
++ User submits a query through the booking page
+---
+
+### **Toasts**
+
+There are four types of toasts that are displayed to the user when specific actions happen. This keeps the user informed about what is happening when it happens. The toasts are:
+
++ Success
+   + When a user sucessfuly signs in/signs out
+   + When a user adds a product to a bag
+   + When an admin adds/edits items
++ Info
+   + When a user is viewing previous order details
++ Warning
+   + Stripe key not found 
++ Error
+   + When an admin's CRUD action fails
+
+
+---
+
+## Possible Future Features
++ A artist profile page where you can see all of the music they have and links to external sites like instagram etc. 
++ Ability to 'star' products to a users own account to refer back to.
++ Donate page to help fund events/music.
++ Featured content on Index page, like 'latest blog post' or 'latest song release'. 
+
+## Defensive Design Features
+
+Below are the steps that I have taken with regards to defensive design:
+
++ Form validation:
+   + If incorrect data is added to a form, the form won't submit and a warning will appear to the user
+   + Image files are vefified by Django's ImageField
+
++ Adding products to bag:
+   + A user cannot add more than the amount of quantity there is on an item. This is a model, and quantity is added through admin.
+   + A user cannot add 0 quantity of a product
+
++ Default images:
+   + The images have been set to required but if for any reason this fails, there is a default image that will take it's place
+
++ Custom error pages:
+   + A 404 error page will show if the user treis to visit a page that doesn't exist. There are buttons on the page for the user to redirect themselves
+   + A 500 error page will show if an internal server error occurs on the site.
+
++ Authenticated vs unauthenticated user pages:
+   + The @login_required decorator has been used to make sure that secure pages stay off limites to unauthenticated users
+
+---
+

@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post, Item
+from .models import Post
 from .forms import PostForm
 from django.contrib import messages
 
@@ -9,6 +9,7 @@ from django.contrib import messages
 def blog(request):
     """A view to return the blog page"""
     return render(request, 'blog/blog.html')
+
 
 class PostList(generic.ListView):
     model = Post
@@ -31,9 +32,9 @@ class PostDetail(View):
             {
                 'post': post,
                 'liked': liked,
-            }, 
-                
+            },
         )
+
 
     def post(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -48,8 +49,9 @@ class PostDetail(View):
             {
                 'post': post,
                 'liked': liked,
-            }, 
-                   )
+            },
+        )
+
 
 class PostLike(View):
     def post(self, request, slug):
@@ -61,6 +63,7 @@ class PostLike(View):
             post.likes.add(self.request.user)
 
         return HttpResponseRedirect(reverse('blog_detail', args=[slug]))
+
 
 def add_item(request):
     if request.method == 'POST':
@@ -102,10 +105,11 @@ def toggle_item(request, slug):
         form.save()
         return redirect('PostList')
 
+
 def delete_item_view(request, slug):
     text_type = 'post'
     post = get_object_or_404(Post, slug=slug)
-    context = {'post': post,'text_type': text_type} 
+    context = {'post': post, 'text_type': text_type}
     return render(request, 'delete_blog.html', context)
 
 

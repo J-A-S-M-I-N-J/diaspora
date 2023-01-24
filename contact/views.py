@@ -1,8 +1,6 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.views import generic, View
-from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.views import View
 
-# Create your views here.
 
 class contact(View):
     def get(self, request, *args, **kwargs):
@@ -10,6 +8,7 @@ class contact(View):
             request,
             'contact.html',
         )
+
 
 class terms(View):
     def get(self, request, *args, **kwargs):

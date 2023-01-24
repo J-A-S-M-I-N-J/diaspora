@@ -5,7 +5,6 @@ if os.path.exists('env.py'):
     import env
 
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -15,7 +14,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
+
 ALLOWED_HOSTS = ['diaspora-website.herokuapp.com', 'localhost', '127.0.0.1', '127.0.0.1:8000']
+
 
 EMAIL_HOST = 'smtp.mailtrap.io'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
@@ -47,11 +48,12 @@ INSTALLED_APPS = [
     'music',
     'django_summernote',
 
-    
+
     # other
     'crispy_forms',
     'storages',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -63,9 +65,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 ROOT_URLCONF = 'diaspora.urls'
 
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 TEMPLATES = [
     {
@@ -92,10 +97,12 @@ TEMPLATES = [
     },
 ]
 
+
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
+
 AUTHENTICATION_BACKENDS = [
-    
+
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
@@ -103,9 +110,10 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
+
 SITE_ID = 1
 
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'"
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'"
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -114,6 +122,7 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+
 
 WSGI_APPLICATION = 'diaspora.wsgi.application'
 
@@ -212,6 +221,7 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 
@@ -223,6 +233,4 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'diaspora@example.com'
-
-# Cloudinary
 

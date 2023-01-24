@@ -1,6 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
-
-# Create your views here.
+from django.shortcuts import render
 
 
 def index(request):

@@ -5,10 +5,11 @@ from django.template.loader import render_to_string
 
 from .forms import Booking
 
-# Create your views here.
+
 def booking(request):
     """ A view to return the booking page, and sending a booking """
-    
+
+
     if request.method == 'POST':
         form = Booking(request.POST)
         if form.is_valid():

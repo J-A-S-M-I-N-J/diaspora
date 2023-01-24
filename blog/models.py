@@ -3,7 +3,9 @@ from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 from .widgets import CustomClearableFileInput
 
+
 STATUS = ((0, "Draft"), (1, "Published"))
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
