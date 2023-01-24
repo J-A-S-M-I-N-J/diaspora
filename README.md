@@ -290,3 +290,119 @@ Below are the steps that I have taken with regards to defensive design:
 
 ---
 
+---
+
+# Database
+
+Two relational databases were used to create this site - during production SQLite was used and then ElephantSQL was used for the deployed Heroku version. 
+Below is an image of how the database models relate to each other:
+
+## Products
+
++ This model stores the product details that the user can buy from the site
++ This model sends information to the OrderLineItem model to create the purchase
+
+## Inventory
+
++ This model keeps track of the quantity of products in order to determine if items are out of stock and stops users from purchasing more products than we have.
+
+## Artists
+
++ This model stores the artist details that the user can browse through
+
+## OrderLineItem
+
++ This model stores a product that has been added to the users bag
++ This model pulls information from the products model to add them to the users order
++ This model sends information to the Order model to update the order information
+
+## Order
+
++ This model stores the full order information
++ This model pulls information from the OrderLineItem model to add products to the order
++ This model pulls information from the UserProfile model to attach the order to their profile
+
+## UserProfile
+
++ This model stores the users delivery and order information
++ This model pulls information from the User model to create the profile
++ This model sends information to the Order model to attach the order to their profile
+
+## User
+
++ This model stores the user registration information
++ This model sends information to the UserProfile model to create the profile
+
+# Deployment
+
+## Apps / Programs
+
+This project was deployed through Heroku.
+It uses AWS for media files. 
+Elephant SQL for database. 
+Stripe used for the payments system.
+
+---
+---
+
+# Testing
+Due to the size of the testing section, I have created a separate document for it. You can find it [here](https://github.com/AmyOShea/MS4-ARTstop/blob/master/TESTING.md). 
+
+## Bugs
+
+
+---
+---
+
+---
+---
+
+# Credits
+## Code
+
++ The initial site functionality was made using the [Boutique Ado](https://github.com/ckz8780/boutique_ado_v1) walkthrough by [Chris Zielinski](https://github.com/ckz8780) via Code Institute. The code was adapted for what I needed.
+
++ I used [Bootstrap Page](https://getbootstrap.com/docs/4.0/utilities/flex/) to better understand designing the pages.
+
+---
+---
+
+# Technologies Used
+## Languages
++ [HTML5](https://en.wikipedia.org/wiki/HTML5)
++ [CSS3](https://en.wikipedia.org/wiki/CSS)
++ [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
++ [Python3](https://www.python.org/)
+
+## Frameworks and Libraries
++ [Django](https://www.djangoproject.com/)
++ [Pip3](https://pip.pypa.io/en/stable/)
++ [jQuery](https://jquery.com/)
++ [FontAwesome](https://fontawesome.com/)
++ [Google Fonts](https://fonts.google.com/)
++ [Bootstrap](https://getbootstrap.com/)
+
+## All Others
++ [Heroku](https://www.heroku.com/) used to deploy live site.
++ [Stripe](https://stripe.com/en-ie) used for the payments system.
++ [AWS](https://aws.amazon.com/) used for file storage.
++ [GitHub](https://github.com/) used to host repository.
++ [GitPod](https://www.gitpod.io/) used to develop project and organise version control.
++ [ResizeImage.net](https://resizeimage.net/) used to cut and re-size site images. 
++ [Balsamiq](https://balsamiq.com/) used to create wireframes.
++ [Lighthouse](https://developers.google.com/web/tools/lighthouse) for performance review.
++ [Responsinator](https://www.responsinator.com/) used to check site was responsive on different screen sizes.
++ [Am I Responsive](http://ami.responsivedesign.is/) used to generate README intro image.
++ [favicon.io](https://favicon.io/) used to create a site favicon.
+
+## Content
+
++ All photos and graphic design on the page is our own. 
+
++ All bios and text/blog posts have been written by me. 
+
+## Acknowledgements
+
++ My mentor Antonio Rodriguez for for his help at the different stages of the project.
+
+
