@@ -22,6 +22,7 @@ You can follow us [Facebook](https://www.facebook.com/diaspora.cltv) and [Instag
 ---
 
 ## Design
+
 ### Overall Feel & Colors
 
 The webpage follows our graphic profile made by one of the members of the collective. Minimalistic with black and white elements that makes it easy to read and the color purple makes appearances on some links/borders since that is our signature color for when we host events. 
@@ -278,6 +279,15 @@ Below are the steps that I have taken with regards to defensive design:
 Two relational databases were used to create this site - during production SQLite was used and then ElephantSQL was used for the deployed Heroku version. 
 Below is an image of how the database models relate to each other:
 
+[Database Schema](media/database1.png)
+[Database Schema](media/database2.png)
+
+Product is the main database to create the products and give it all of its attributes, and the Inventory takes in the product model.
+
+The blog has a separate database model similar to the one in the django-blog project.
+
+Artist/Music pages have two databases, one for artists and one for music. 
+
 ## Products
 
 + This model stores the product details that the user can buy from the site
@@ -327,7 +337,7 @@ Stripe used for the payments system.
 ---
 
 # Testing
-Due to the size of the testing section, I have created a separate document for it. You can find it [here](https://github.com/AmyOShea/MS4-ARTstop/blob/master/TESTING.md). 
+Due to the size of the testing section, I have created a separate document for it. You can find it [here](https://github.com/J-A-S-M-I-N-J/diaspora/blob/main/TESTING.md). 
 
 ---
 ---
