@@ -10,9 +10,9 @@ Mostly fixed stray-end tags and some unclosed <span> elements.
 
 The validator does react to every single template-tag though. Not sure if this is a real 'error'. See below.
 
-[Image]
+[Errors](media/template_tags.png)
 
-Errors found & fixed: 
+
 
 ### **CSS**
 
@@ -35,7 +35,7 @@ and also Flake8 (in VScode). There are no major errors in the code, however ther
 
 After getting the bulk of the site in place, I ran it through Chrome Lighthouse.
 
-![Lighthouse](lighthouse.png)
+![Lighthouse](media/lighthouse.png)
 
 I'm very glad that the SEO is a 100, however disapointed by the 68 accessability score
 
@@ -125,3 +125,7 @@ To test this theory, I commented out the ```cache_checkout_data(request)``` func
 ## Automated Testing
 
 I have throughout the program struggled with learning and understanding python automated testing and I regretelly fall short on this in this project also, and it's also a reason why I saved it for last. I'm happy the page works well but would have loved to try to break it if my coding skills would be sufficient. 
+
+I want to credit Amy (https://github.com/AmyOShea/MS4-ARTstop.git) for creating the code for some of the automated testing she had done on her project. Since we use the same forms and models from the walkthrough project I decided to implement it to mine. This is the testing that can be found on the Products & Checkout Page. 
+
+For the blog page I tested if the required fields work and that the post_detail pages loads properly. 
