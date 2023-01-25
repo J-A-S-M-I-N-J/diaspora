@@ -107,9 +107,11 @@
                     <button class="navbar-toggler bg-white text-black" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+
                     {% include 'includes/mobile-top-header.html' %}
                     {% include 'includes/main-nav.html' %}
                 </nav>
+            </div>
         </header>
 
         {% if messages %}
@@ -153,10 +155,6 @@
                     <li class="list-inline-item pt-4">
                         <a href="https://www.instagram.com/diaspora.cltv/" target="_blank" rel="noopener"
                             aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="list-inline-item pt-4">
-                        <a class="text-white" href="https://chimpstatic.com/mcjs-connected/js/users/f0ed095844578ec110a414515/9accc569c203ff04ddc5617e5.js" target="_blank" rel="next"
-                            aria-label="Visit our Twitter page (opens in a new tab)">Newsletter</a>
                     </li>
                     <li class="list-inline-item pt-4">
                         <a class="text-white" href="{% url 'terms' %}" target="_blank" rel="help"
