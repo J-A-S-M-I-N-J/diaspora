@@ -11,7 +11,11 @@ You can find the live site [here](https://diaspora-webpage.herokuapp.com/)
 
 ## Business Case
 
+The Swedish electronic club scene has long belonged to -swedes- and music genres pulling in the direction of techno or deep house. We - meaning people of 'multicultural' (and often non-european) backgrounds have not been able to showcase the deep connections to music, dance and culture that we are so rich in. 'Diaspora Crew' consists of 3 DJ's/producers that have had successful solo-careers in Stockholm and abroad and now we are investing in this collective in hope that our combined efforts can bare more fruit for us, but also pave the way for like-minded people. Diaspora besides those 3 members also has a photographer/graphic designer and an administrator handling the economy and business-relations. 
 
+We promote mainly on Instagram and Facebook where we have built a small following (200) and create digital content and post weekly to create more buzz. With this web-page we will be able to promote directly through the blog and help people learn more about the genres we represent. This webpage will also act like a hub where we can link our latest tracks and sell our merchandise. This will help build capital where we are looking to become a 'real business' later this year. We are both a B2B and B2C company since we work directly with nightclubs, bars, festival and event organizers to create services like events, but also sell products like merch and our music to 'the people'.
+
+You can follow us [Facebook](https://www.facebook.com/diaspora.cltv) and [Instagram](https://www.instagram.com/diaspora.cltv/)
 
 
 
@@ -198,7 +202,7 @@ The user can browse through the Contact page where you can find out where to rea
 
 ---
 
-### **Footer **
+### **Footer**
 
 The footer has links to our facebook page and our instagram-page. It also has a link to newsletter-signup and our Terms & Conditions.
 
@@ -324,12 +328,6 @@ Stripe used for the payments system.
 
 # Testing
 Due to the size of the testing section, I have created a separate document for it. You can find it [here](https://github.com/AmyOShea/MS4-ARTstop/blob/master/TESTING.md). 
-
-## Bugs
-
-
----
----
 
 ---
 ---
