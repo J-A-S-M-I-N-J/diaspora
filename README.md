@@ -4,7 +4,7 @@ On the site you can find our music, buy our merchandise read about events and co
 
 You can find the live site [here](https://diaspora-webpage.herokuapp.com/)
 
-![Main site image](frontpage.PNG)
+![Main site image](media/frontpage.png)
 
 ---
 ---
@@ -239,6 +239,12 @@ There are four types of toasts that are displayed to the user when specific acti
 + Error
    + When an admin's CRUD action fails
 
+### **Newsletter Popup**
+
+The page has a Newsletter popup when you first enter the page/delete cache/cookies, but there is also a linkl at the bottom and at the Contact-page to sign-up at any time. 
+
+![Newsletter](media/popup.png)
+
 
 ---
 
@@ -279,8 +285,8 @@ Below are the steps that I have taken with regards to defensive design:
 Two relational databases were used to create this site - during production SQLite was used and then ElephantSQL was used for the deployed Heroku version. 
 Below is an image of how the database models relate to each other:
 
-[Database Schema](media/database1.png)
-[Database Schema](media/database2.png)
+![Image1](media/database1.png)
+![Image2](media/database2.png)
 
 Product is the main database to create the products and give it all of its attributes, and the Inventory takes in the product model.
 
@@ -373,11 +379,8 @@ Due to the size of the testing section, I have created a separate document for i
 + [AWS](https://aws.amazon.com/) used for file storage.
 + [GitHub](https://github.com/) used to host repository.
 + [GitPod](https://www.gitpod.io/) used to develop project and organise version control.
-+ [ResizeImage.net](https://resizeimage.net/) used to cut and re-size site images. 
 + [Balsamiq](https://balsamiq.com/) used to create wireframes.
 + [Lighthouse](https://developers.google.com/web/tools/lighthouse) for performance review.
-+ [Responsinator](https://www.responsinator.com/) used to check site was responsive on different screen sizes.
-+ [Am I Responsive](http://ami.responsivedesign.is/) used to generate README intro image.
 + [favicon.io](https://favicon.io/) used to create a site favicon.
 
 ## Content
@@ -388,6 +391,7 @@ Due to the size of the testing section, I have created a separate document for i
 
 ## Acknowledgements
 
++ My friends and Diaspora Crew that came with valuable input in various stages.
 + My mentor Antonio Rodriguez for for his help at the different stages of the project.
 
 

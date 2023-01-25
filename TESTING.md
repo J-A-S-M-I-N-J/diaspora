@@ -46,6 +46,11 @@ I'm very glad that the SEO is a 100, however disapointed by the 68 accessability
 
 ---
 
+## Create User
+
+User gets Error 500 when trying to create a User, user also can't log in until email has been verified. 
+I've done a workaround by removing 'required' from email-verification and redirecting the user back to 'home'. However I would want this to be able to work in future renditions. 
+
 ### Bag Quantity
 
 Editing quantities in bag doesen't work. The "buttons" don't do anything, however you can still change the amount with the 'arrows'. 
