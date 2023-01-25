@@ -8,36 +8,13 @@ You can find the live site [here](https://diaspora-webpage.herokuapp.com/)
 
 ---
 ---
-# Contents
-  + [Design](#design)
-    + [Overall Feel](#overall-feel)
-    + [Colour Scheme](#colour-scheme)
-    + [Typography](#typography)
-    + [Imagery](#imagery)
-  + [Wireframes and Initial Design](#wireframes-and-initial-design)
-    + [Wireframes](#wireframes)
-    + [Design Mock Up](#design-mock-up)
-+ [Features](#features)
-  + [Current Features](#current-features)
-  + [Possible Future Features](#possible-future-features)
-  + [Defensive Design Features](#defensive-design-features)
-+ [Database](#database)
-+ [Technologies Used](#technologies-used)
-  + [Languages](#languages)
-  + [Frameworks and Libraries](#frameworks-and-libraries)
-  + [All Others](#all-others)
-+ [Testing](#testing)
-+ [Deployment](#deployment)
-  + [Heroku Deployment](#heroku-deployment)
-  + [Set up AWS](#set-up-aws)
-  + [Set up Emails](#set-up-emails)
-  + [Forking the Repository](#forking-the-repository)
-  + [Making a Local Clone](#making-a-local-clone)
-+ [Credits](#credits)
-  + [Content](#content)
-  + [Media](#media)
-  + [Acknowledgements](#acknowledgements)
----
+
+## Business Case
+
+
+
+
+
 ---
 
 ## Design

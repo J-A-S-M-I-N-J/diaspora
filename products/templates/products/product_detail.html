@@ -60,9 +60,9 @@
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-black-inverted rounded-0 
                                             decrement-qty_{{ product.id }}" data-item_id="{{ product.id }}">
-                                                    <span class="icon">
-                                                        <i class="fas fa-minus text-white"></i>
-                                                    </span>
+                                            <span class="icon">
+                                            <i class="fas fa-minus text-white"></i>
+                                            </span>
                                             </button>
                                         </div>
                                         <input class="form-control qty_input id_qty_{{ product.id }}" type="number" 
@@ -71,10 +71,10 @@
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-black-inverted text-white rounded-0 
                                             increment-qty_{{ product.id }}" data-item_id="{{ product.id }}"
-                                            data-item_max="{{ product.get_inventory }}"
-                                            >
-                                                    <span class="icon">
-                                                        <i class="fas fa-plus text-white"></i>
+                                            data-item_max="{{ product.get_inventory }}">
+                                            <span class="icon">
+                                            <i class="fas fa-plus text-white"></i>
+                                            </span>
                                             </button>
                                         </div>
                                     </div>
@@ -87,7 +87,11 @@
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                {%if product.get_inventory > 0%}
+                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                {%else%}
+                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Sold out" disabled>
+                                {%endif%}
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}
@@ -103,4 +107,3 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
-    

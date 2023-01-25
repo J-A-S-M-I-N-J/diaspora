@@ -14,7 +14,6 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body bg-black text-white">
                             <div class="image-container">
@@ -28,8 +27,7 @@
                             <a href="{% url 'blog_detail' post.slug %}">
                                 <h2 class="card-title text-white text-uppercase mt-2 post-link">{{ post.title }}</h2>
                             </a>
-                                <p class="card-text text-white text-uppercase text-decoration-none mt-2">{{ post.excerpt }}</p>
-                            </a>
+                            <p class="card-text text-white text-uppercase text-decoration-none mt-2">{{ post.excerpt }}</p>
                             <p class="card-text h6 text-uppercase mt-2">{{ post.created_on }} <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}</p>
                             <div class="image-flash">
@@ -65,6 +63,5 @@
             {% endif %}
         </ul>
     </nav>
-    
 </div>
 {%endblock%}
