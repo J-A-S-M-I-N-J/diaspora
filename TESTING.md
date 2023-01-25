@@ -22,46 +22,22 @@ I had two CSS files that were checked using [W3C CSS Validation Service](https:/
 
 I checked the all the JavaScript files using [JSHint](https://jshint.com/)
 
-There were a few missing semicolons and ES6 version issues but they were easy fixes. 
-
-One error that I found that I was in the checkout javascript file:
-
-![JS valiadation error](docs/bugs-and-fixes/js-validation-error.PNG)
-
-Because the code comes from Stripe itself, I don't want to touch this and am happy to leave it alone. 
+All of the JS came from the walkthrough projects and is valid. 
 
 ### **Python**
-I checked the Py files using [PEP8 online](http://pep8online.com/)
-
-The code passed all checks.
+I checked the Py files using [Pythonchecker](https://www.pythonchecker.com/)
+and also Flake8 (in VScode). There are no major errors in the code, however there are some lines that are too long that I didn't dare change to keep the integrity of the site working.
 
 ---
 ---
 
 ## Lighthouse Testing
 
-After getting the bulk of the site in place, I ran it through Chrome Lighthouse. While all of the elements were in green, I wanted to improve them:
+After getting the bulk of the site in place, I ran it through Chrome Lighthouse.
 
+![Lighthouse](lighthouse.png)
 
-### **Performance**
-
-I made no changes to the performance score. 
-
-### **Accessibility**
-
-I changed the footer ``<h5>`` elements to ``<p>`` elements which improved the score.
-
-### **Best Practices**
-
-I added ``rel="noopener"`` to the footer Facebook link
-
-### **SEO**
-
-I added a meta decription to the base template. 
-
-### Final Lighthouse Score:
-
-![Lighthouse score](docs/lighthouse-desktop.PNG)
+I'm very glad that the SEO is a 100, however disapointed by the 68 accessability score
 
 ---
 ---
@@ -87,6 +63,11 @@ At seemingly random times the blog would give an internal server error, usually 
 One image seems to randomly rescale on XL media queries, which is strange because the images are the same size and dimensions and the artists are created from the same model. 
 
 ---
+
+### Responsivenss on XL -> Super Wide
+
+There is a bug where the image-blocks on index page doesen't stay 3x3 but goes on to become 4x2.
+
 
 ## Fixed Bugs
 
@@ -134,3 +115,8 @@ When sending a ```payment_intent.succeeded``` test webhook, Stripe sends default
 ![Stripe test webhook issue](docs/bugs-and-fixes/bug-08-03.PNG)
 
 To test this theory, I commented out the ```cache_checkout_data(request)``` function and the test webhook worked.
+
+
+## Automated Testing
+
+I have throughout the program struggled with learning and understanding python automated testing and I regretelly fall short on this in this project also, and it's also a reason why I saved it for last. I'm happy the page works well but would have loved to try to break it if my coding skills would be sufficient. 

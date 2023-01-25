@@ -4,7 +4,7 @@ On the site you can find our music, buy our merchandise read about events and co
 
 You can find the live site [here](https://diaspora-webpage.herokuapp.com/)
 
-![Main site image](docs/readme-header-image.PNG)
+![Main site image](frontpage.PNG)
 
 ---
 ---
@@ -382,7 +382,7 @@ Due to the size of the testing section, I have created a separate document for i
 
 ## Content
 
-+ All photos and graphic design on the page is our own. 
++ All photos and graphic design on the page is shot and edited by Ammie Darbo (Diaspora Crew)
 
 + All bios and text/blog posts have been written by me. 
 

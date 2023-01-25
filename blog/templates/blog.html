@@ -19,7 +19,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.blog_image.url %}
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="placeholder image for posts, a blogger">
+                                    src="diaspora_logo.png" alt="placeholder image for posts, a blogger">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.blog_image.url }}" alt="blog image about music and culture related topics">
                                 {% endif %}
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-</div>
+
         {% if request.user.is_superuser %}
            
         {% endif %}
@@ -64,4 +64,5 @@
         </ul>
     </nav>
 
+</div>
 {%endblock%}
