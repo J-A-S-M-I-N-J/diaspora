@@ -4,9 +4,7 @@ import os
 if os.path.exists('env.py'):
     import env
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
@@ -14,9 +12,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-
 ALLOWED_HOSTS = ['diaspora-website.herokuapp.com', 'localhost', '127.0.0.1', '127.0.0.1:8000']
-
 
 EMAIL_HOST = 'smtp.mailtrap.io'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
@@ -54,7 +50,6 @@ INSTALLED_APPS = [
     'storages',
 ]
 
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -65,12 +60,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-
 ROOT_URLCONF = 'diaspora.urls'
 
-
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
 
 TEMPLATES = [
     {
@@ -97,9 +89,7 @@ TEMPLATES = [
     },
 ]
 
-
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
-
 
 AUTHENTICATION_BACKENDS = [
 
@@ -110,10 +100,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-
 SITE_ID = 1
-
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'"
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -125,7 +112,6 @@ LOGIN_REDIRECT_URL = '/'
 
 
 WSGI_APPLICATION = 'diaspora.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -141,7 +127,6 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -161,7 +146,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -180,7 +164,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 if 'USE_AWS' in os.environ:
 
@@ -233,4 +216,3 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'diaspora@example.com'
-
